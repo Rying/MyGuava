@@ -1,0 +1,36 @@
+apply plugin: 'idea'
+
+apply plugin: 'maven'
+
+apply plugin: 'war'
+
+apply plugin: 'jetty'
+
+
+group = 'com.thoughtworks.ns.env'
+
+version = '0.0.1'
+
+
+repositories {
+ 
+   mavenCentral()
+
+}
+
+
+dependencies {
+
+    compile(
+            'com.google.guava:guava:12.0' )
+    testCompile 'junit:junit:4.11'
+
+}
+
+
+task wrapper(type: Wrapper) {
+
+    gradleVersion = '1.8'
+
+}
+
